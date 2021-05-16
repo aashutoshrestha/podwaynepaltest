@@ -3,6 +3,7 @@
 <head>
     <title>Podway Nepal</title>
     <link rel="stylesheet" href="design/design.css">
+    <link rel="stylesheet" href="design/sliderdesign.css">
     <link rel="icon" 
       type="image/jpeg" 
       href="imageassets/websiteassets/logo.jpeg" />
@@ -11,13 +12,13 @@
     <div class="topnav">
 
         <img src="imageassets/websiteassets/logo.jpeg" class="logoleft"> 
-        <a class="active" href="#home">Home</a>
-        <a href="#transportationinnepal">Transportation in Nepal</a>
-        <a href="#podwaysolution">Podway Solution</a>
-        <a href="#unitsky">Unitsky</a>
-        <a href="#benefitstonepal">Benefits to Nepal</a>
-        <a href="#executiveteam">Executive Team</a>
-        <a href="#contactus">Contact Us</a>
+        <a class="active" href="#">Home</a>
+        <a href="transportation-in-nepal.html">Transportation in Nepal</a>
+        <a href="podwaysolution.html">Podway Solution</a>
+        <a href="unitsky.html">Unitsky</a>
+        <a href="benefits-to-nepal.html">Benefits to Nepal</a>
+        <a href="executiveteam.html">Executive Team</a>
+        <a href="contactus.html">Contact Us</a>
         <div class="sociallink">
             <img src="imageassets/websiteassets/facebook.png" class="sociallinkimage"> 
             <img src="imageassets/websiteassets/twitter.png" class="sociallinkimage"> 
@@ -28,13 +29,128 @@
         
       </div> 
       
-        
+        <!--
           <div class="video-container">
             <video autoplay muted loop id="video">
                 <source src="videoassets/main1.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
               </video>
           </div>
+        -->
+
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="imageassets/homepagesliders/slider1.png" style="width:100%" class="imgslider">
+            <div class="text">Transportation in Nepal</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="imageassets/homepagesliders/slider2.png" style="width:100%" class="imgslider">
+            <div class="text">The Podway Solution</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="imageassets/homepagesliders/slider3.png" style="width:100%" class="imgslider">
+            <div class="text">Unitsky</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="imageassets/homepagesliders/slider4.png" style="width:100%" class="imgslider">
+            <div class="text">Benefits to Nepal</div>
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+          </div>
+              
+          <div class="content-container">
+            <h1 class="contentheader">
+              Kathmandu Podway Pvt. Ltd. Is ideally positioned to develop a transportation system that is 
+              ideally suited for the culture, geography, and economics of Nepal
+            </h1>
+                 <p class="contentparagraph"> We will implement a proven, state-of-the-art personal 
+                  mass transportation system across Nepal. This system will 
+                  operate throughout all the major cities and connect the 
+                  cities with very high speed, computer-controlled cars.
+                </p>
+                <img src="imageassets/websiteassets/content1.png" class="imgright"> 
+                <p class="contentparagraph">
+                  We already have the political support essential for this 
+                  venture. Further, we have firm agreements with two clients 
+                  and we expect to sign agreements with at least another six 
+                  jurisdictions during the next few months.
+                  </p>
+                  
+                  <p class="contentparagraph">
+                  This podway will be a matter of national prestige. It will be 
+                  a major tourist draw. It will have a direct and immediate 
+                  impact on the socio-economic status of the country. It will
+                  dramatically reduce carbon emissions and eliminate traffic 
+                  deaths. It will create a new, major source of employment 
+                  for Nepalis. Once the company offers shares on the public 
+                  exchange, it will create a domestic investment opportunity 
+                  that will be among the most attractive in the country.
+                  </p>
+                  <img src="imageassets/websiteassets/content2.png" class="imgright"> 
+                  <p class="contentparagraph">
+                  Recently, we raised initial funding for our first two projects. 
+                  We are approaching likely venture capitalists, lending 
+                  institutions, and government agencies to identify several 
+                  potential funding sources.
+                  </p>
+                  
+                  <p class="contentparagraph">We will build strong working relationships with universities, community colleges, and vocational 
+                    schools to conduct research and development as well as prepare Nepali professionals and 
+                    craftsmen to take leadership roles throughout the company.</p>
+                    <p class="contentparagraph">The company is led by two executives with a pioneering spirit. They have worked in large, 
+                    traditional corporations; they have built and led successful ventures in several countries. They 
+                    developed the project management and financial management discipline required by working 
+                    at the executive level for many decades</p>
+                  
+          </div>
 
 </body>
 </html>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>     

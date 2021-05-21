@@ -141,6 +141,22 @@
     object-fit: cover;
   }
 
+  .details-container{
+    vertical-align: middle;
+    position: relative;
+    object-fit: cover;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .details-container img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+
 
   #video {
     position: absolute;

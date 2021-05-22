@@ -65,17 +65,17 @@
             <div class="text">Benefits to Nepal</div>
           </div>
           
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a class="prev" onclick="plusClicked(-1)">&#10094;</a>
+          <a class="next" onclick="plusClicked(1)">&#10095;</a>
           
           </div>
           <br>
           
           <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentClicked(1)"></span> 
+            <span class="dot" onclick="currentClicked(2)"></span> 
+            <span class="dot" onclick="currentClicked(3)"></span> 
+            <span class="dot" onclick="currentClicked(4)"></span> 
           </div>
               
           <div class="content-container">
@@ -124,7 +124,7 @@
                   
           </div>
 <div class = "footer">
-  <p>All Rights Reserved, Podwaynepal 2021 </p>
+  <p><span>&#169;</span> All Rights Reserved, Podway Nepal 2021. <a href="privacyandlegal.html">Privacy and Legal</a></p> 
   <div class="footersociallink">
     <img src="imageassets/websiteassets/facebook.png" class="footersociallinkimage"> 
     <img src="imageassets/websiteassets/twitter.png" class="footersociallinkimage"> 
@@ -139,7 +139,21 @@
 <script>
   var slideIndex = 1;
   showSlides(slideIndex);
-  
+  // setTimeout( function(){ showSlides(slideIndex); console.log(slideIndex); } ,1000);
+
+  // setTimeout( function(){ plusSlides(1); console.log(slideIndex); } ,3000);
+  var tout;
+
+  function plusClicked(n){
+    clearTimeout(tout);
+    plusSlides(n);
+  }
+
+  function currentClicked(n){
+    clearTimeout(tout);
+    currentSlide(n);
+  }
+
   function plusSlides(n) {
     showSlides(slideIndex += n);
   }
@@ -160,7 +174,16 @@
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
+
+    
+    
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
+
+    // setTimeout( function(){ showSlides(slideIndex += n); console.log(slideIndex); } ,3000);
+
+    tout = setTimeout(plusSlides,3000,1);
   }
+
+  
   </script>     

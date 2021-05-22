@@ -54,7 +54,7 @@
             <div class="grid-itemleft">
 
             <div class="inputcontainer">
-            <form action="/action_page.php">
+            <form action="" onsubmit="return openMail()">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -325,7 +325,7 @@
         </div>
 
         <div class = "footer">
-            <p>All Rights Reserved, Podwaynepal 2021 </p>
+            <p><span>&#169;</span> All Rights Reserved, Podway Nepal 2021. <a href="privacyandlegal.html">Privacy and Legal</a></p> 
             <div class="footersociallink">
               <img src="imageassets/websiteassets/facebook.png" class="footersociallinkimage"> 
               <img src="imageassets/websiteassets/twitter.png" class="footersociallinkimage"> 
@@ -337,3 +337,16 @@
           </div>
 </body>
 </html>
+<script>
+function openMail() {
+    var subject = document.getElementById("subject").value;
+
+
+        var email = 'contact@podwaynepal.com';
+        var subject = 'Contact Purpose';
+        var emailBody = document.getElementById("subject").value;
+        //var attach = 'path'
+
+    window.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody;
+}
+</script>
